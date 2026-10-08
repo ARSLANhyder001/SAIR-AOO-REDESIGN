@@ -21,7 +21,7 @@ import AdminScreen from './src/screens/AdminScreen';
 const Tab=createBottomTabNavigator(),Stack=createNativeStackNavigator();
 const icons={Home:['home-variant','home-variant-outline','Home'],List:['magnify','magnify','Search'],Saved:['heart','heart-outline','Saved'],Account:['account','account-outline','Account'],Menu:['view-grid','view-grid-outline','More']};
 function Tabs(){const C=useC();return(<Tab.Navigator screenOptions={({route})=>({headerShown:false,tabBarLabel:icons[route.name][2],tabBarLabelStyle:{fontSize:11,fontWeight:'700'},
- tabBarActiveTintColor:C.red2,tabBarInactiveTintColor:C.mute,tabBarStyle:{backgroundColor:C.tabBg,borderTopColor:C.dark?'rgba(212,20,30,.45)':C.line},
+ tabBarActiveTintColor:C.red2,tabBarInactiveTintColor:C.mute,tabBarStyle:{backgroundColor:C.tabBg,borderTopColor:C.dark?'rgba(148,209,190,.45)':C.line},
  tabBarIcon:({color,focused})=><Icon name={icons[route.name][focused?0:1]} size={26} color={color}/>})}>
  <Tab.Screen name="Home" component={HomeScreen}/><Tab.Screen name="List" component={ListScreen}/><Tab.Screen name="Saved" component={SavedScreen}/>
  <Tab.Screen name="Account" component={AccountScreen}/><Tab.Screen name="Menu" component={MenuScreen}/></Tab.Navigator>)}

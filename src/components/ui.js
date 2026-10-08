@@ -63,11 +63,11 @@ export const Tile=({icon,label,onPress})=>{const C=useC(),s=useS();return(
  <Pressable accessibilityRole="button" accessibilityLabel={label} onPress={onPress} style={({pressed})=>[s.tile,pressed&&{transform:[{scale:.96}]}]}>
   <View style={s.ico}><Icon name={icon} size={24} color={C.red2}/></View>
   <Text style={{color:C.tx,fontSize:13,fontWeight:'500'}}>{label}</Text></Pressable>)};
-export const Badge=({text,dark})=>{const s=useS();return <View style={[s.badge,dark&&{backgroundColor:'rgba(22,24,29,.85)'}]}><Text style={{color:'#fff',fontSize:11,fontWeight:'700'}}>{text}</Text></View>};
+export const Badge=({text,dark})=>{const s=useS();return <View style={[s.badge,dark&&{backgroundColor:'rgba(59,65,60,.9)'}]}><Text style={{color:'#fff',fontSize:11,fontWeight:'700'}}>{text}</Text></View>};
 // expo-image = disk + memory caching, smooth fade-in, recycles views in long lists.
 export const Thumb=memo(({item,style,w=480})=>{const C=useC(),u=sized(cover(item),w);return u
  ?<Image source={{uri:u}} style={style} contentFit="cover" transition={200} cachePolicy="memory-disk" recyclingKey={u}/>
- :<View style={[style,{backgroundColor:C.dark?`hsl(${item.hue??350}, 25%, 14%)`:`hsl(${item.hue??350}, 30%, 92%)`,alignItems:'center',justifyContent:'center'}]}><Icon name="office-building-outline" size={38} color={C.dark?'rgba(255,255,255,.25)':'rgba(0,0,0,.2)'}/></View>});
+ :<View style={[style,{backgroundColor:C.dark?`hsl(${item.hue??165}, 25%, 14%)`:`hsl(${item.hue??165}, 30%, 92%)`,alignItems:'center',justifyContent:'center'}]}><Icon name="office-building-outline" size={38} color={C.dark?'rgba(255,255,255,.25)':'rgba(0,0,0,.2)'}/></View>});
 export function Skeleton({style}){const C=useC();
  const o=useRef(new Animated.Value(.35)).current;
  useEffect(()=>{const a=Animated.loop(Animated.sequence([Animated.timing(o,{toValue:.7,duration:700,useNativeDriver:true}),Animated.timing(o,{toValue:.35,duration:700,useNativeDriver:true})]));a.start();return()=>a.stop()},[o]);
@@ -94,6 +94,6 @@ export function Gallery({item,height=240}){
     <Pressable onPress={()=>setFull(false)} hitSlop={12} accessibilityLabel="Close" style={{position:'absolute',top:ins.top+10,right:16}}><Icon name="close" size={30} color="#fff"/></Pressable></View></Modal></View>)}
 export const Logo=({size=90})=>(
  <Svg width={size} height={size*1.1} viewBox="0 0 100 110">
-  <Polygon points="20,10 60,0 60,22 36,30" fill="#2b2f36"/><Polygon points="60,0 82,12 82,34 60,22" fill="#b3121b"/>
+  <Polygon points="20,10 60,0 60,22 36,30" fill="#2b2f36"/><Polygon points="60,0 82,12 82,34 60,22" fill="#2a7360"/>
   <Polygon points="20,40 78,48 78,68 20,60" fill="#5b616b"/><Polygon points="80,70 80,96 40,108 40,86" fill="#2b2f36"/>
-  <Polygon points="20,70 40,76 40,100 20,92" fill="#8a0d14"/></Svg>);
+  <Polygon points="20,70 40,76 40,100 20,92" fill="#1f5748"/></Svg>);

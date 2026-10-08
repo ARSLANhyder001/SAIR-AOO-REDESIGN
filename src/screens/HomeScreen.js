@@ -13,7 +13,7 @@ const TILES=[['Projects','crane','List',{kind:'project'}],['Properties','office-
 function Mark({C}){return(<Svg width={104} height={120} viewBox="0 0 120 140">
  <Defs><SvgGrad id="mk" x1="0" y1="0" x2="1" y2="1"><Stop offset="0" stopColor={C.mark[0]}/><Stop offset="1" stopColor={C.mark[1]}/></SvgGrad></Defs>
  <Polygon points="20,8 100,0 100,34 20,44" fill="url(#mk)"/><Polygon points="20,44 52,40 52,68 20,76" fill="url(#mk)"/>
- <Polygon points="20,76 100,68 100,98 52,104" fill="#9d0d15"/><Polygon points="52,68 100,62 100,98 52,104" fill="url(#mk)"/>
+ <Polygon points="20,76 100,68 100,98 52,104" fill="#2a7360"/><Polygon points="52,68 100,62 100,98 52,104" fill="url(#mk)"/>
  <Polygon points="20,106 68,100 68,136 20,140" fill="url(#mk)"/><Polygon points="68,100 100,96 100,132 68,136" fill={C.dark?'#d9d9d9':'#5b616b'}/></Svg>);}
 
 function Card({C,s,item,index,scrollX,cw,snap,saved,onOpen,onStar}){
@@ -99,7 +99,7 @@ const mk=C=>StyleSheet.create({
  ct:{color:C.tx,fontSize:17,fontWeight:'700',marginTop:12,marginHorizontal:8},
  cs:{color:C.mute,fontSize:12.5,marginHorizontal:8,marginTop:2,marginBottom:10},
  btn:{height:38,borderRadius:19,marginHorizontal:8,alignItems:'center',justifyContent:'center'},bt:{color:'#fff',fontSize:13,fontWeight:'700'},
- arrow:{position:'absolute',top:'50%',marginTop:-22,width:44,height:44,borderRadius:22,borderWidth:1,borderColor:C.line,backgroundColor:C.dark?'rgba(10,3,5,0.9)':'rgba(255,255,255,0.95)',alignItems:'center',justifyContent:'center'},
+ arrow:{position:'absolute',top:'50%',marginTop:-22,width:44,height:44,borderRadius:22,borderWidth:1,borderColor:C.line,backgroundColor:C.dark?'rgba(42,47,43,0.9)':'rgba(255,255,255,0.95)',alignItems:'center',justifyContent:'center'},
  tile:{aspectRatio:1/1.12,borderRadius:18,alignItems:'center',justifyContent:'center',gap:10,borderWidth:1,borderColor:C.line,borderLeftColor:C.red},
  tt:{color:C.tx,fontSize:12.5,fontWeight:'700'},
  msg:{color:C.mute,textAlign:'center',paddingVertical:40}});
